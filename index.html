@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			* {
+				padding: 0px;
+				/*设置所有填充属性*/
+				margin: 0px;
+				/*设置所有外边距属性*/
+			}
+			
+			body {
+				font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+				background: #f5f5f5;
+				line-height: 1.8;
+				font-size: 14px;
+				color: #333;
+			}
+			
+			#header {
+				background: #ffffff;
+				height: 70px;
+				box-shadow: 0 0 3px 1px rgba(0, 0, 0, .1);
+			}
+			
+			.head {
+				width: 1270px;
+				height: 76px;
+				margin: 0px auto;
+				/* 0 auto：等于0 auto 0 auto 常用于水平居中  */
+				font-size: 16px;
+				color: #333333;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			}
+			
+			.nav {
+				list-style: none;
+				/*在一个声明中指定所有列表属性*/
+			}
+			
+			.nav li {
+				float: left;
+				/*左浮动*/
+				/*padding: 0px 30px 0px 30px;*/
+				margin-left: 30px;
+				padding-top: 21px;
+			}
+			
+			a {
+				text-decoration: none;
+				/*规定添加到文本的修饰，下划线、上划线、删除线等。*/
+				color: #333333;
+			}
+			
+			a:hover {
+				color: #3ca5f6;
+			}
+			
+			.logo {
+				float: left;
+				padding-top: 20px;
+			}
+			
+			.logo img {
+				width: 120px;
+				height: 30px;
+			}
+			
+			.search {
+				float: right;
+				padding-top: 20px;
+				padding-right: 100px;
+				/*?padding-top:20px ;*/
+			}
+			
+			.s1 {
+				width: 120px;
+				height: 20px;
+				border-radius: 3px;
+				/*修改搜索框的角,变得圆润些*/
+			}
+			
+			.s2 {
+				font-size: 14px;
+			}
+			
+			#main {
+				width: 2240px;
+				margin: 0px auto;
+				margin-top: 30px;
+				background: #333333;
+				overflow: hidden;
+			}
+			
+			.leftpart {
+				width: 900px;
+				height: 1200px;
+				margin-top: 20px;
+				margin-left: 100px;
+				background: #FFFFFF;
+				overflow: hidden;
+			}
+			
+			.lu {
+				padding: 10px 0px 5px 0px;
+				font-size: 19px;
+				margin-left: 20px;
+				border-bottom: 2px solid #0088CC;
+				width: 76px;
+			}
+			
+			.lu a {
+				color: #08c;
+			}
+			
+			.artile {
+				width: 900px;
+				height: 193px;
+				/*border-top-style: solid;
+				border-top-color: #efefef;*/
+				border-bottom-style: solid;
+				border-bottom-color: #efefef;
+				/*float: left;*/
+			}
+			
+			.leftpart img {
+				width: 200px;
+				height: 150px;
+				margin: 20px 0px 5px 15px;
+			}
+			
+			.text-img,
+			.text {
+				float: left;
+			}
+			
+			.text {
+				color: #333333;
+				width: 600px;
+				margin: 10px 0px 5px 10px;
+			}
+			
+			.text-title {
+				font-size: 18px;
+				color: #333;
+				padding: 5px 0px 10px 10px;
+			}
+			
+			.text-content {
+				font-size: 14px;
+				color: #666;
+				padding: 0px 0px 15px 10px;
+			}
+			
+			.text-data {
+				font-size: 13px;
+				color: #999;
+				padding: 30px 0px 10px 10px;
+			}
+			
+			.text-title2 {
+				color: #F5F5F5;
+				background: #000000;
+				background: rgba(0, 0, 0, .6);
+				padding: 2px 3.5px;
+				font-size: 10px;
+				position: relative;
+				top: 5px;
+				left: -370px;
+			}
+			
+			.leftpart,
+			.right {
+				float: left;
+			}
+			
+			.right {
+				width: 300px;
+				height: 400px;
+				background: #FFFFFF;
+				margin-top: 20px;
+				margin-left: 30px;
+				padding-bottom: 15px;
+				overflow: hidden;
+			}
+			
+			.right-title {
+				height: 20px;
+				width: 200px;
+				background: #FFFFFF;
+				border-left: 2px solid #0088CC;
+				margin: 15px 0px 5px 20px;
+			}
+			
+			.rtext {
+				font-size: 18px;
+				padding: 0px 5px;
+				line-height: 18px;
+			}
+			
+			.right-text li {
+				list-style: square inside;
+				list-style-image: url(img/list1.png);
+				line-height: 40px;
+			}
+			
+			.right-text {
+				padding: 5px 0px 0px 10px;
+			}
+			
+			.more {
+				width: 450px;
+				height: 50px;
+				/*display: block ;*/
+				margin: 15px 43px;
+				border-radius: 4px;
+				border: solid #337ab7;
+				padding: 18px 0px 0px 350px;
+			}
+			
+			.more a {
+				color: #3CA5F6;
+				font-size: 16px;
+			}
+			
+			.cls {
+				clear: both;
+			}
+			
+			#floorpart {
+				background: #333333;
+				height: 120px;
+			}
+			
+			.a {
+				list-style: none;
+				padding: 40px 0px 30px 150px;
+			}
+			
+			.a li {
+				float: left;
+				margin-left: 50px;
+			}
+			
+			.a a {
+				color: #FFFFFF;
+			}
+			
+			.aa a {
+				margin: 50px 180px;
+				color: #FFFFFF;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="head">
+				<div class="logo">
+					<img src="img/logo.png">
+					<!--img加载图片-->
+				</div>
+				<ul class="nav">
+					<!--ul：无序列表元素-->
+					<li>
+						<a href="#">首页</a>
+					</li>
+					<li>
+						<a href="#">代码审计</a>
+					</li>
+					<li>
+						<a href="#">安全防御</a>
+					</li>
+					<li>
+						<a href="#">下载</a>
+					</li>
+					<li>
+						<a href="#">渗透测试</a>
+					</li>
+					<li>
+						<a href="#">渗透编程</a>
+					</li>
+					<li>
+						<a href="#">靶场测试</a>
+					</li>
+					<li>
+						<a href="#">渗透测试培训</a>
+					</li>
+					<li>
+						<a href="#">公开课</a>
+					</li>
+				</ul>
+				<form class="search" method="get">
+					<input class="s1" type="text" placeholder="请输入搜索的内容">
+					<input class="s2" type="submit" value="搜索">
+				</form>
+			</div>
+		</div>
+
+		<div id="mian">
+			<div class="leftpart">
+				<div class="lu">
+					<a href="#">最新文章</a>
+				</div>
+
+				<div class="artile">
+					<div class="text-img">
+						<img src="img/1.jpg">
+					</div>
+					<div class="text">
+						<div class="text-title">
+							<a href="https://www.moonsec.com/9481.html">三个bypass案例分享</a>
+							<a href="#" class="text-title2">渗透测试</a>
+						</div>
+						<div class="text-content">
+							<p>首发：土司论坛 案例1 文件上传 wafbypass内容校验+后缀校验 已具备条件：上传处可上传任意类型的文件，但是平台存在waf，直接上传会被拦截 bypass后缀校验 利用…</p>
+						</div>
+						<div class="text-data">
+							<p>2023年11月21日</p>
+						</div>
+					</div>
+				</div>
+				<div class="artile">
+					<div class="text-img">
+						<img src="img/1.jpg">
+					</div>
+					<div class="text">
+						<div class="text-title">
+							<a href="https://www.moonsec.com/9481.html">三个bypass案例分享</a>
+							<a href="#" class="text-title2">渗透测试</a>
+						</div>
+						<div class="text-content">
+							<p>首发：土司论坛 案例1 文件上传 wafbypass内容校验+后缀校验 已具备条件：上传处可上传任意类型的文件，但是平台存在waf，直接上传会被拦截 bypass后缀校验 利用…</p>
+						</div>
+						<div class="text-data">
+							<p>2023年11月21日</p>
+						</div>
+					</div>
+				</div>
+				<div class="artile">
+					<div class="text-img">
+						<img src="img/1.jpg">
+					</div>
+					<div class="text">
+						<div class="text-title">
+							<a href="https://www.moonsec.com/9481.html">三个bypass案例分享</a>
+							<a href="#" class="text-title2">渗透测试</a>
+						</div>
+						<div class="text-content">
+							<p>首发：土司论坛 案例1 文件上传 wafbypass内容校验+后缀校验 已具备条件：上传处可上传任意类型的文件，但是平台存在waf，直接上传会被拦截 bypass后缀校验 利用…</p>
+						</div>
+						<div class="text-data">
+							<p>2023年11月21日</p>
+						</div>
+					</div>
+				</div>
+				<div class="artile">
+					<div class="text-img">
+						<img src="img/1.jpg">
+					</div>
+					<div class="text">
+						<div class="text-title">
+							<a href="https://www.moonsec.com/9481.html">三个bypass案例分享</a>
+							<a href="#" class="text-title2">渗透测试</a>
+						</div>
+						<div class="text-content">
+							<p>首发：土司论坛 案例1 文件上传 wafbypass内容校验+后缀校验 已具备条件：上传处可上传任意类型的文件，但是平台存在waf，直接上传会被拦截 bypass后缀校验 利用…</p>
+						</div>
+						<div class="text-data">
+							<p>2023年11月21日</p>
+						</div>
+					</div>
+				</div>
+				<div class="artile">
+					<div class="text-img">
+						<img src="img/1.jpg">
+					</div>
+					<div class="text">
+						<div class="text-title">
+							<a href="https://www.moonsec.com/9481.html">三个bypass案例分享</a>
+							<a href="#" class="text-title2">渗透测试</a>
+						</div>
+						<div class="text-content">
+							<p>首发：土司论坛 案例1 文件上传 wafbypass内容校验+后缀校验 已具备条件：上传处可上传任意类型的文件，但是平台存在waf，直接上传会被拦截 bypass后缀校验 利用…</p>
+						</div>
+						<div class="text-data">
+							<p>2023年11月21日</p>
+						</div>
+					</div>
+				</div>
+				<div class="more">
+					<a>点击查看更多</a>
+				</div>
+			</div>
+
+			<div id="rightpart">
+				<div class="right">
+					<div class="right-title">
+						<p class="rtext">近期文章</p>
+					</div>
+					<div class="right-text">
+						<li>
+							<a href="#">三个bypass案例分享</a>
+						</li>
+						<li>
+							<a href="#">记一次地级市攻防3W分</a>
+						</li>
+						<li>
+							<a href="#">记一次Oracle注入漏洞提权的艰难过程</a>
+						</li>
+						<li>
+							<a href="#">webshell静态免杀的一些思路</a>
+						</li>
+						<li>
+							<a href="#">记一次有意思的远控样本分析</a>
+						</li>
+						<li>
+							<a href="#">某次HW行动中艰难曲折的getshell</a>
+						</li>
+						<li>
+							<a href="#">GadgetInspector源码分析</a>
+						</li>
+						<li>
+							<a href="#">webshell静态免杀的一些思路</a>
+						</li>
+						<li>
+							<a href="#">记一次有意思的远控样本分析</a>
+						</li>
+						<li>
+							<a href="#">某次HW行动中艰难曲折的getshell</a>
+						</li>
+						<li>
+							<a href="#">GadgetInspector源码分析</a>
+						</li>
+
+					</div>
+				</div>
+
+				<div class="right">
+					<div class="right-title">
+						<p class="rtext">文章归档</p>
+					</div>
+					<div class="right-text">
+						<li>
+							<a href="#">2023年11月</a>
+						</li>
+						<li>
+							<a href="#">2023年9月</a>
+						</li>
+						<li>
+							<a href="#">2023年8月</a>
+						</li>
+						<li>
+							<a href="#">2023年5月</a>
+						</li>
+						<li>
+							<a href="#">2023年4月</a>
+						</li>
+						<li>
+							<a href="#">2022年11月</a>
+						</li>
+						<li>
+							<a href="#">2022年8月</a>
+						</li>
+						<li>
+							<a href="#">2023年11月</a>
+						</li>
+						<li>
+							<a href="#">2023年9月</a>
+						</li>
+						<li>
+							<a href="#">2023年8月</a>
+						</li>
+						<li>
+							<a href="#">2023年5月</a>
+						</li>
+						<li>
+							<a href="#">2023年4月</a>
+						</li>
+						<li>
+							<a href="#">2022年11月</a>
+						</li>
+						<li>
+							<a href="#">2022年8月</a>
+						</li>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+		<div class="cls"></div>
+		<div id="floorpart">
+			<div class="a">
+				<li>
+					<a href="a1">aaa</a>
+				</li>
+				<li>
+					<a href="a1">aaa</a>
+				</li>
+				<li>
+					<a href="a1">aaa</a>
+				</li>
+			</div>
+			<div class="aa">
+				<li>
+					<a href="b1">bbbbbbbb</a>
+				</li>
+			</div>
+		</div>
+
+	</body>
+
+</html>
